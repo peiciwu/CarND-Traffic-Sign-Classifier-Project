@@ -99,7 +99,7 @@ Here are the results of the prediction:
 | Speed limit (30km/h)                  | Speed limit (30km/h)                  |
 | Speed limit (50km/h)                  | Speed limit (60km/h)                  |
 
-The model was able to correctly guess 5 of the 6 traffic signs, which gives an accuracy of 83.3%. The last image is predicted to 60km/h instead of 50km/h which follows my analysis. The not-front-view prespective of the image makes it difficult to classify. This could be solved by adding the other data set by applying affine transfomration. 
+The model was able to correctly guess 5 of the 6 traffic signs, which gives an accuracy of 83.3%. The last image is predicted to 60km/h instead of 50km/h which follows my analysis: the not-front-view prespective of the image makes it difficult to classify. This should be able to be solved by adding the other data set by applying affine transfomration. 
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
@@ -128,37 +128,37 @@ For the third image, very sure it is a "right-of-way at the next intersection" s
 | Probability           |     Prediction                                | 
 |:---------------------:|:---------------------------------------------:| 
 |                 Right-of-way at the next intersection | 9.99999e-01 |
-                                    | Beware of ice/snow | 6.35610e-07 |
-                                     |     Double curve | 1.42321e-18 |
-                                     | Children crossing | 3.00282e-20 |
-                                        | Pedestrians | 3.25969e-22 |
+| Beware of ice/snow | 6.35610e-07 |
+| Double curve | 1.42321e-18 |
+| Children crossing | 3.00282e-20 |
+| Pedestrians | 3.25969e-22 |
 
 For the forth image, very sure it is a 50km/h sign. "30km/h" also has a probablity of 0.0000145. To my surprise, "60km/h" is not at top 5 softmax probabilities (in fact it is the top 7, not shown here.), however, the probabilies other than the top 2 are quite small.
 
 | Probability           |     Prediction                                | 
 |:---------------------:|:---------------------------------------------:| 
 | Speed limit (50km/h) |  9.99985e-01 |
-                                  | Speed limit (30km/h) |  1.45207e-05 |
-                                          | No vehicles | 4.39666e-19 |
-                                                 | Yield | 3.33982e-19 |
-                                  | Speed limit (20km/h) | 6.90084e-20 |
+| Speed limit (30km/h) |  1.45207e-05 |
+| No vehicles | 4.39666e-19 |
+| Yield | 3.33982e-19 |
+| Speed limit (20km/h) | 6.90084e-20 |
 
 For the fifth image, very sure it is a 30km/h sign. Other speed limit signs are also included in the top 5.
 
 | Probability           |     Prediction                                | 
 |:---------------------:|:---------------------------------------------:| 
 | Speed limit (30km/h) | 1.00000e+00 |
-                                  | Speed limit (50km/h) | 1.51344e-08 |
-                                  | Speed limit (80km/h) | 4.19746e-09 |
-                                  | Speed limit (20km/h) | 1.56980e-10 |
-                                            | Road work | 1.00604e-11 |
+| Speed limit (50km/h) | 1.51344e-08 |
+| Speed limit (80km/h) | 4.19746e-09 |
+| Speed limit (20km/h) | 1.56980e-10 |
+| Road work | 1.00604e-11 |
 
-For the sixth image, there is 0.98% sure it is a 60km/h sign, which is wrong. The correct sign "50km/h" has 0.0178 probability, and good thing is that compared to the predictions done on other images, at least the model is not that sure on this image. Some more image transformation (such as affine transformation) is needed to correctly predict this image. 
+For the sixth image, there is 0.98% sure it is a 60km/h sign, which is wrong. The correct sign "50km/h" has 0.0178 probability, and good thing is that compared to the predictions done on other images, at least the model is not that sure on this image. Some more image transformation (such as affine transformation) is needed to correctly classify this image. 
 
 | Probability           |     Prediction                                | 
 |:---------------------:|:---------------------------------------------:| 
 | Speed limit (60km/h) | 9.82196e-01 |
-                                  | Speed limit (50km/h) | 1.77992e-02 |
-                                  | Speed limit (80km/h) | 5.27697e-06 |
-                                            | No passing  | 7.45391e-13 |
-                                           | No vehicles | 6.59927e-13 |
+| Speed limit (50km/h) | 1.77992e-02 |
+| Speed limit (80km/h) | 5.27697e-06 |
+| No passing  | 7.45391e-13 |
+| No vehicles | 6.59927e-13 |
